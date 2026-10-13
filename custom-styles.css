@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Mishaq Jewels - Storefront Overrides & UI Adjustments
+   ========================================================================== */
+
+/* Layout & Logo Dimensions */
+img.pls-logo,
+.pls-header img.pls-logo,
+header img.pls-logo {
+  width: auto !important;
+  max-width: 180px !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: 377 / 200 !important;
+  object-fit: contain !important;
+}
+
+.pls-site-wrapper a:has(> img.pls-logo),
+.site-logo,
+.header-logo {
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Brand Palette Overrides */
+.pls-product-categories-thumbnails .category-title,
+.pls-product-brands .brand-title {
+  color: #d4af37 !important;
+}
+
+.pls-product-categories-thumbnails .category-title span:before,
+.pls-pro {
+  border-bottom: 2px solid #d4af37 !important;
+}
+
+.pls-cart-button a,
+.button {
+  background-color: #043927 !important;
+  color: #fffff0 !important;
+}
+
+.pls-cart-button a:hover {
+  background-color: #032b1d !important;
+  color: #fffff0 !important;
+}
+
+/* Mobile Offcanvas Drawer */
+.menu-mobile-wrapper .site-branding,
+.menu-mobile-wrapper .logo,
+.menu-mobile-wrapper img,
+.header-mobile-drawer .logo,
+.header-mobile-drawer .site-branding,
+.header-mobile-drawer img,
+div[class*="mobile-menu"] .logo,
+div[class*="mobile-menu"] img:first-of-type,
+div[class*="canvas"] .logo,
+div[class*="canvas"] img:first-of-type {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  max-height: 0 !important;
+}
+
+.menu-mobile-wrapper .close-btn,
+.header-mobile-drawer .close-btn,
+div[class*="mobile-menu"] .close-btn {
+  display: block !important;
+  margin-left: auto !important;
+}
+
+/* WooCommerce Product & Swatch Tweaks */
+.reset_variations {
+  display: none !important;
+}
+
+.wpc-variation-swatch {
+  background-color: inherit !important;
+  border: 1px solid #ccc !important;
+}
+
+body.home .pls-site-content {
+  padding-top: 5px !important;
+}
+
+.pls-footer-copyright.copyright-centered
+  .pls-copyright-wrap
+  > div:not(:last-child) {
+  margin-bottom: 1rem;
+  display: none !important;
+}
+
+/* Contrast & Touch Target Fixes */
+.price del,
+.price del span.woocommerce-Price-amount,
+.price del bdi {
+  color: #4f4f4f !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 48px;
+  min-height: 48px;
+}
